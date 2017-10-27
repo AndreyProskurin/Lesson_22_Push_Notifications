@@ -16,7 +16,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    if ([application respondsToSelector:@selector(isRegisteredForRemoteNotifications)]) {
+        
+        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+        [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound + UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
+            if (!granted) {
+                //Show alert asking to go to settings and allow permission
+                
+            }
+        }];
+    }
+    
+//    application.applicationIconBadgeNumber = 0; // обнуление иконки уведомлений (красный кружок на иконке). перенесен в appdelegate
+    
     return YES;
 }
 
@@ -35,6 +48,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    application.applicationIconBadgeNumber = 0;
 }
 
 

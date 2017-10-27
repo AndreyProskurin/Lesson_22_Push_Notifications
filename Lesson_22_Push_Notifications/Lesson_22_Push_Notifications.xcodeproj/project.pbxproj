@@ -26,6 +26,7 @@
 		3259B9581FA399D8009142B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3259B95A1FA399D8009142B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3259B95B1FA399D8009142B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3259B9631FA39E6E009142B7 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +45,7 @@
 			children = (
 				3259B94B1FA399D8009142B7 /* Lesson_22_Push_Notifications */,
 				3259B94A1FA399D8009142B7 /* Products */,
+				3259B9621FA39E6E009142B7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +71,14 @@
 				3259B95B1FA399D8009142B7 /* main.m */,
 			);
 			path = Lesson_22_Push_Notifications;
+			sourceTree = "<group>";
+		};
+		3259B9621FA39E6E009142B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3259B9631FA39E6E009142B7 /* UserNotifications.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
